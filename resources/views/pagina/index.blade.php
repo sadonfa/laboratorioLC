@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Medicio Bootstrap Template - Index</title>
+  <title>Laboratorio Clinico - Liceth Camacho</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{{ asset ('assets/img/favicon.png') }}" rel="icon">
+  <link href="{{ asset ('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -43,29 +43,32 @@
   <div id="topbar" class="d-flex align-items-center fixed-top">
     <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
       <div class="align-items-center d-none d-md-flex">
-        <i class="bi bi-clock"></i> Monday - Saturday, 8AM to 10PM
+        <i class="bi bi-clock"></i> {{date("l d F Y") }}
       </div>
       <div class="d-flex align-items-center">
-        <i class="bi bi-phone"></i> Call us now +1 5589 55488 55
+        <i class="bi bi-phone"></i> Tel: 605 667 48 02   
+        <i class="bi bi-phone"></i> Cel: +57 316 572 74 26
       </div>
     </div>
   </div>
 
   <!-- ======= Header ======= -->
+  @section('header')
+  
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt=""></a>
+      <a href="index.html" class="logo me-auto"><img src="{{ asset ('assets/img/logo.png') }}" alt=""></a>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <h1 class="logo me-auto"><a href="index.html">Medicio</a></h1> -->
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto " href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto" href="#departments">Departments</a></li>
-          <li><a class="nav-link scrollto" href="#doctors">Doctors</a></li>
+          <li><a class="nav-link scrollto " href="#hero">Inicio</a></li>
+          <li><a class="nav-link scrollto" href="#about">Nosotros</a></li>
+          <li><a class="nav-link scrollto" href="#services">Servicios</a></li>
+          <li><a class="nav-link scrollto" href="#departments">Departamentos</a></li>
+          <li><a class="nav-link scrollto" href="#doctors">Doctores</a></li>
           <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
@@ -83,15 +86,17 @@
               <li><a href="#">Drop Down 4</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contacto</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">Make an</span> Appointment</a>
+      <a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">Resultados</span></a>
 
     </div>
   </header><!-- End Header -->
+  
+  @show
 
   <!-- ======= Hero Section ======= -->
   <section id="hero">
@@ -104,9 +109,13 @@
         <!-- Slide 1 -->
         <div class="carousel-item active" style="background-image: url(assets/img/slide/slide-1.jpg)">
           <div class="container">
-            <h2>Welcome to <span>Medicio</span></h2>
-            <p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel.</p>
-            <a href="#about" class="btn-get-started scrollto">Read More</a>
+            <h2>Bienvenidos a <span>Laboratorios </span></h2>
+            <p>Realizar y analizar exámenes de las diferentes áreas con
+              estándares de calidad y oportunidad que garanticen un resultado
+              veraz y confiable, para brindar una excelente ayuda diagnostica a la
+              comunidad que lo demande.
+              </p>
+            <a href="#about" class="btn-get-started scrollto">Leer Mas</a>
           </div>
         </div>
 
@@ -115,7 +124,7 @@
           <div class="container">
             <h2>Lorem Ipsum Dolor</h2>
             <p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel.</p>
-            <a href="#about" class="btn-get-started scrollto">Read More</a>
+            <a href="#about" class="btn-get-started scrollto">Leer Mas</a>
           </div>
         </div>
 
@@ -124,7 +133,7 @@
           <div class="container">
             <h2>Sequi ea ut et est quaerat</h2>
             <p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel.</p>
-            <a href="#about" class="btn-get-started scrollto">Read More</a>
+            <a href="#about" class="btn-get-started scrollto">Leer Mas</a>
           </div>
         </div>
 
@@ -190,9 +199,9 @@
       <div class="container" data-aos="zoom-in">
 
         <div class="text-center">
-          <h3>In an emergency? Need help now?</h3>
+          <h3>¿En una emergencia? ¿Necesitas ayuda ahora?</h3>
           <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <a class="cta-btn scrollto" href="#appointment">Make an Make an Appointment</a>
+          <a class="cta-btn scrollto" href="#appointment">Haga Una Cita</a>
         </div>
 
       </div>
@@ -203,7 +212,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>About Us</h2>
+          <h2>¿Quienes Somos?</h2>
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
@@ -212,20 +221,28 @@
             <img src="assets/img/about.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
-            <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <ul>
-              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-            </ul>
+            <h3>Mision</h3>
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
+              Ofrecer servicios de Laboratorio Clínico y Salud Ocupacional a la
+              comunidad y a todas las empresas de los diferentes sectores
+              económicos; pequeñas, medianas y pequeñas y de esta manera
+              llenar sus expectativas de diagnostico, seguimiento y tratamiento de
+              posibles enfermedades ocupacionales, minimizando con su manejo el
+              riesgo de padecerlas y disminuyendo el fenómeno de ausentismo
+              laboral.
+
+            </p>
+
+            <h3>Vision</h3>
+            <p>
+              Para el 2022 Posicionarnos y ser reconocidos como uno de los
+              principales Laboratorios de Análisis Clínico y de Salud Ocupacional a
+              nivel nacional, logrando ser una institución de referencia para el
+              Sector Empresarial, Hotelero, de obra civil, Industrial, suministro de
+              personal y de Laboratorios e Instituciones de Salud, contando con
+              excelentes estándares de oportunidad, confiabilidad, tecnología y
+              calidad.
+
             </p>
           </div>
         </div>
@@ -244,8 +261,8 @@
               <i class="fas fa-user-md"></i>
               <span data-purecounter-start="0" data-purecounter-end="85" data-purecounter-duration="1" class="purecounter"></span>
 
-              <p><strong>Doctors</strong> consequuntur quae qui deca rode</p>
-              <a href="#">Find out more &raquo;</a>
+              <p><strong>Doctores</strong> consequuntur quae qui deca rode</p>
+              <a href="#">Saber Mas &raquo;</a>
             </div>
           </div>
 
@@ -253,17 +270,17 @@
             <div class="count-box">
               <i class="far fa-hospital"></i>
               <span data-purecounter-start="0" data-purecounter-end="26" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Departments</strong> adipisci atque cum quia aut numquam delectus</p>
-              <a href="#">Find out more &raquo;</a>
+              <p><strong>Departamentos</strong> adipisci atque cum quia aut numquam delectus</p>
+              <a href="#">Saber Mas &raquo;</a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
             <div class="count-box">
               <i class="fas fa-flask"></i>
-              <span data-purecounter-start="0" data-purecounter-end="14" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Research Lab</strong> aut commodi quaerat. Aliquam ratione</p>
-              <a href="#">Find out more &raquo;</a>
+              <span data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Laboratorios</strong> aut commodi quaerat. Aliquam ratione</p>
+              <a href="#">Saber Mas &raquo;</a>
             </div>
           </div>
 
@@ -271,8 +288,8 @@
             <div class="count-box">
               <i class="fas fa-award"></i>
               <span data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Awards</strong> rerum asperiores dolor molestiae doloribu</p>
-              <a href="#">Find out more &raquo;</a>
+              <p><strong>Premios</strong> rerum asperiores dolor molestiae doloribu</p>
+              <a href="#">Saber Mas &raquo;</a>
             </div>
           </div>
 
@@ -319,7 +336,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Services</h2>
+          <h2>Servicios</h2>
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
@@ -364,29 +381,29 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Make an Appointment</h2>
+          <h2>Aparta Una Cita</h2>
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
         <form action="forms/appointment.php" method="post" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
           <div class="row">
             <div class="col-md-4 form-group">
-              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+              <input type="text" name="name" class="form-control" id="name" placeholder="Nombre y Apellido" required>
             </div>
             <div class="col-md-4 form-group mt-3 mt-md-0">
-              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+              <input type="email" class="form-control" name="email" id="email" placeholder="Correo" required>
             </div>
             <div class="col-md-4 form-group mt-3 mt-md-0">
-              <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" required>
+              <input type="tel" class="form-control" name="phone" id="phone" placeholder="Telefono" required>
             </div>
           </div>
           <div class="row">
             <div class="col-md-4 form-group mt-3">
-              <input type="datetime" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date" required>
+              <input type="datetime" name="date" class="form-control datepicker" id="date" placeholder="Dia de Cita" required>
             </div>
             <div class="col-md-4 form-group mt-3">
               <select name="department" id="department" class="form-select">
-                <option value="">Select Department</option>
+                <option value="">Seleccione Departamento</option>
                 <option value="Department 1">Department 1</option>
                 <option value="Department 2">Department 2</option>
                 <option value="Department 3">Department 3</option>
@@ -394,7 +411,7 @@
             </div>
             <div class="col-md-4 form-group mt-3">
               <select name="doctor" id="doctor" class="form-select">
-                <option value="">Select Doctor</option>
+                <option value="">Seleccione Doctor</option>
                 <option value="Doctor 1">Doctor 1</option>
                 <option value="Doctor 2">Doctor 2</option>
                 <option value="Doctor 3">Doctor 3</option>
@@ -403,14 +420,14 @@
           </div>
 
           <div class="form-group mt-3">
-            <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
+            <textarea class="form-control" name="message" rows="5" placeholder="Mensaje (Opcional)"></textarea>
           </div>
           <div class="my-3">
             <div class="loading">Loading</div>
             <div class="error-message"></div>
             <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div>
           </div>
-          <div class="text-center"><button type="submit">Make an Appointment</button></div>
+          <div class="text-center"><button type="submit"> Cita </button></div>
         </form>
 
       </div>
@@ -421,8 +438,11 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Departments</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>Departamentos</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur 
+            ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam
+            quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. 
+            Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
@@ -430,26 +450,66 @@
             <ul class="nav nav-tabs flex-column">
               <li class="nav-item">
                 <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
-                  <h4>Cardiology</h4>
-                  <p>Quis excepturi porro totam sint earum quo nulla perspiciatis eius.</p>
+                  <h4>INMUNOLOGIA Y AUTOINMUNIDAD</h4>
+                  <p>Apoyo al estudio de trastornos Inmunológicos y Reumatológicos.</p>
                 </a>
               </li>
               <li class="nav-item mt-2">
                 <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
-                  <h4>Neurology</h4>
-                  <p>Voluptas vel esse repudiandae quo excepturi.</p>
+                  <h4> INFECCIOSAS</h4>
+                  <p>Apoyo diagnóstico Enfermedades Virales.</p>
                 </a>
               </li>
               <li class="nav-item mt-2">
                 <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
-                  <h4>Hepatology</h4>
-                  <p>Velit veniam ipsa sit nihil blanditiis mollitia natus.</p>
+                  <h4>QUIMICA DE ORINA</h4>
+                  <p>Apoyo al estudio de las enfermedades que se manifiestan o que tiene
+                    un origen en el sistema urinario.
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
+                  <h4>QUIMICA SANGUÍNEA</h4>
+                  <p>Estadio de enfermedad general y suministra información sobre el
+                    metabolismo.                    
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
+                  <h4>DROGAS TERAPEUTICAS</h4>
+                  <p>Medicina del nivel de medicamento circulante en la sangre en un
+                    paciente que requiere estar consumiendo crónicamente el mismo.                                    
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
+                  <h4>TOXICOLOGÍA</h4>
+                  <p>Apoyo diagnóstico a los diferentes tipos de intoxicaciones por
+                    consumo de algunas sustancias.                                                      
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
+                  <h4>PARASITOLOGIA </h4>
+                  <p>Apoyo Diagnóstico en Enfermedades Parasitarias</p>
+                </a>
+              </li>
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
+                  <h4>HEMATOLOGIA Y COAGULACION</h4>
+                  <p>Apoyo diagnóstico de Anemias – Leucemias- Trastornos de la Sangre</p>
                 </a>
               </li>
               <li class="nav-item mt-2">
                 <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
-                  <h4>Pediatrics</h4>
-                  <p>Ratione hic sapiente nostrum doloremque illum nulla praesentium id</p>
+                  <h4>ENDOCRINOLOGÍA Y MARCADORES TUMORALES </h4>
+                  <p>Apoyo al estudio de enfermedades relacionadas con las glándulas y el
+                    sistema endocrino en general.
+                  </p>
                 </a>
               </li>
             </ul>
@@ -492,7 +552,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Testimonials</h2>
+          <h2>Testimonios</h2>
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
@@ -576,7 +636,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Doctors</h2>
+          <h2>Doctores</h2>
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
@@ -664,7 +724,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Gallery</h2>
+          <h2>Galeria</h2>
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
@@ -775,7 +835,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Frequently Asked Questioins</h2>
+          <h2>Preguntas Frecuentes</h2>
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
@@ -845,14 +905,15 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Contact</h2>
+          <h2>Contactos</h2>
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
       </div>
 
       <div>
-        <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
+        {{-- <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe> --}}
+        <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.3971095376683!2d-75.50572138618065!3d10.39000076905062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef6251f408d0f03%3A0x480e753d33c1f130!2sLaboratorio%20Cl%C3%ADnico%20Liceth%20Camacho!5e0!3m2!1ses-419!2sco!4v1646015825093!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
 
       <div class="container">
@@ -865,22 +926,22 @@
               <div class="col-md-12">
                 <div class="info-box">
                   <i class="bx bx-map"></i>
-                  <h3>Our Address</h3>
-                  <p>A108 Adam Street, New York, NY 535022</p>
+                  <h3>Nuevo Bosque</h3>
+                  <p>Tv 52 N° 29E - 138 </p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="info-box mt-4">
                   <i class="bx bx-envelope"></i>
-                  <h3>Email Us</h3>
-                  <p>info@example.com<br>contact@example.com</p>
+                  <h3>Correo</h3>
+                  <p>info@laboratoriolc.com<br>contact@laboratoriolc.com</p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="info-box mt-4">
                   <i class="bx bx-phone-call"></i>
-                  <h3>Call Us</h3>
-                  <p>+1 5589 55488 55<br>+1 6678 254445 41</p>
+                  <h3>Telefonos</h3>
+                  <p>+57 605 667 48 02<br>+57 316 5727 426</p>
                 </div>
               </div>
             </div>
@@ -891,24 +952,24 @@
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="col form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" required>
                 </div>
                 <div class="col form-group mt-3">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Correo" required>
                 </div>
               </div>
               <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Tema" required>
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                <textarea class="form-control" name="message" rows="5" placeholder="Mensaje" required></textarea>
               </div>
               <div class="my-3">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button type="submit">Enviar Mensaje</button></div>
             </form>
           </div>
 
@@ -927,12 +988,12 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="footer-info">
-              <h3>Medicio</h3>
+              <h3>Laboratorio </h3>
               <p>
-                A108 Adam Street <br>
-                NY 535022, USA<br><br>
-                <strong>Phone:</strong> +1 5589 55488 55<br>
-                <strong>Email:</strong> info@example.com<br>
+                Nuevo Bosque<br>
+                Tv 52 N° 29E - 138 <br><br>
+                <strong>Celular:</strong> +57 316 5727 426 <br>
+                <strong>Email:</strong> info@laboratoriolc.com<br>
               </p>
               <div class="social-links mt-3">
                 <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -945,18 +1006,18 @@
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
+            <h4>Enlaces Utiles</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Inicio</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">¿Quienes Somos?</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Servicios</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terminos del Servicio</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Politicas de Privacidad</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
+            <h4>Nuestros Servicios</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
@@ -967,10 +1028,10 @@
           </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
+            <h4>Nuestro Boletin</h4>
             <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
             <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
+              <input type="email" name="email"><input type="submit" value="Suscribete">
             </form>
 
           </div>

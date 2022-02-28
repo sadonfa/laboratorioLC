@@ -15,6 +15,7 @@ use App\Http\Controllers\ControllerIndex;
 */
 
 Route::get('/', [ControllerIndex::class, 'index']);
+Route::get('/nosotros', [ControllerIndex::class, 'nosotros']);
 
 Auth::routes();
 
